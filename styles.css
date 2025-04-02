@@ -1,0 +1,173 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background: linear-gradient(135deg, #1a1a1a, #333); /* Gradient background */
+    background-size: 400% 400%; /* For animation effect */
+    animation: gradientAnimation 15s ease infinite; /* Animation for the gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff; /* Default text color */
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: #111; /* Container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+    max-width: 800px;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Profile Picture Styles */
+.profile-pic {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    border-radius: 50%; /* Make it circular */
+    background: #222; /* Fallback background color */
+    border: 3px solid #00aaff; /* Border color */
+    display: block; /* Block display */
+    margin: 20px auto; /* Center the image */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for child img */
+}
+
+.profile-pic img {
+    width: 100%; /* Make image responsive */
+    height: 100%; /* Make image responsive */
+    object-fit: cover; /* Cover the area */
+    border-radius: 50%; /* Keep the image circular */
+}
+
+/* Heading Styles */
+h1 {
+    color: #00aaff; /* Heading color */
+    font-size: 2.5em; /* Increase heading size */
+    margin-bottom: 10px; /* Space below heading */
+    font-weight: 600; /* Semi-bold heading */
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 18px;
+    color: inherit; /* Inherit color from body */
+    line-height: 1.6; /* Increase line height for readability */
+    margin: 10px 0; /* Space above and below paragraphs */
+}
+
+/* Biography Section Styles */
+.bio-section {
+    text-align: left; /* Align text to the left */
+    margin-top: 20px; /* Space above the biography section */
+}
+
+/* Button Styles */
+.nav-buttons {
+    margin: 20px 0; /* Space around the button container */
+}
+
+button {
+    background-color: #00aaff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background 0.3s ease; /* Smooth background transition */
+    margin: 5px; /* Space between buttons */
+    font-weight: 500; /* Medium button text */
+}
+
+button:hover {
+    background-color: #0077cc; /* Darker shade on hover */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #00aaff; /* Toggle button background */
+    color: #fff; /* Toggle button text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background 0.3s ease; /* Smooth background transition */
+    font-weight: 500; /* Medium button text */
+}
+
+.theme-toggle:hover {
+    background: #0077cc; /* Darker shade on hover */
+}
+
+/* Light Mode Styles */
+.light-mode {
+    background: #fff; /* Light mode background */
+    color: #000; /* Light mode text color */
+}
+
+.light-mode .container {
+    background: #ddd; /* Light mode container background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Corrected box-shadow */
+}
+
+/* Hobby Boxes */
+.hobby-boxes {
+    display: flex;
+    justify-content: space-around; /* Space out the boxes evenly */
+    margin-top: 20px;
+}
+
+.hobby-box {
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    width: 30%; /* Width of each box */
+    text-align: center; /* Center text inside the box */
+    background-color: #222; /* Default background color for dark mode */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect and background color */
+}
+
+.hobby-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+
+.hobby-box img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.hobby-box input {
+    margin-top: 10px;
+    padding: 5px;
+    width: 80%; /* Width of the input field */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Light Mode Styles for Hobby Boxes */
+.light-mode .hobby-box {
+    background-color: #f9f9f9; /* Light mode background color for boxes */
+    border: 1px solid #aaa; /* Lighter border color for light mode */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Lighter shadow for light mode */
+}
